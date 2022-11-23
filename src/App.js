@@ -10,7 +10,7 @@ function App() {
 
     function submitData(e){
       e.preventDefault()
-      setTodos(oldTodos => [...oldTodos, {todo: task, id: globalId++}])
+      task.length && setTodos(oldTodos => [...oldTodos, {todo: task, id: globalId++}])
       setTask("")
     }
 
@@ -30,7 +30,12 @@ function App() {
         <button type='submit'>Add</button>
       </form>
       <ul>
-      {todos.map(item => <li key={item.id}>{item.todo} <button onClick={() => deleteItem(item.id)}>Delete</button></li>)}
+      {todos.map(item => 
+      <div className='todos'>
+      <li key={item.id}>{item.todo} </li>
+      <button onClick={() => deleteItem(item.id)}>Delete</button>
+      </div>
+      )}
       </ul>
     </div>
   );

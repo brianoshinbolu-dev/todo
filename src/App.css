@@ -1,4 +1,26 @@
+body{
+  background-color: aqua;
+}
+
+.App h1{
+  font-size: 70px;
+
+}
+
+.todos{
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align:left;
+}
+
 .App {
+  text-align: center;
+  width: 35%;
+  margin: auto;
+  background: rgba(85, 99, 85, 0.158);
+  border-radius: 10px;
 }
 
 .App-logo {
@@ -30,12 +52,7 @@
 button, h1, input{
   margin: 1rem;
 }
-li
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+input{
+  width: 80%;
 }
